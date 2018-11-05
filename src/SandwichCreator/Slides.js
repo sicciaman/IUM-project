@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Media } from 'reactstrap';
-import './App.css';
+import '../App.css';
 
 
-const Slides = ({ image }) => {
+const Slides = ({ image}) => {
   const styles = {
     backgroundImage: `url('${image}')`,
     backgroundSize: 'cover',

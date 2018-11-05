@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import  Button from '@material-ui/core/Button';
 import  Typography from '@material-ui/core/Typography';
-import SandwichCreationPage from './SandwichCreationPage.js';
+import SandwichCreationPage from '../SandwichCreator/SandwichCreationPage.js';
 import CustomCard from './CustomCard.js';
 import AutoGridLayout from './AutoGridLayout.js';
 

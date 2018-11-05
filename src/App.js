@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import NavBarCustom from './NavBarCustom.js';
-import SandwichCreationPage from './SandwichCreationPage.js';
+import SandwichCreationPage from './SandwichCreator/SandwichCreationPage.js';
 import Button from '@material-ui/core/Button';
-import MainPage from './MainPage.js';
-import MainLayout from './MainLayout.js';
+import MainPage from './Homepage/MainPage.js';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 
@@ -19,7 +18,6 @@ class App extends Component {
         <Switch>
           <Route
             exact path="/"
-            layout={MainLayout}
             component={MainPage}>
           </Route>
 

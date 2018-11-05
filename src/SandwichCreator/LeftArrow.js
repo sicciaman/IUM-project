@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import arrowLeft from './images/glyphicons-211-arrow-left.png';
+import arrowLeft from '../images/glyphicons-211-arrow-left.png';
 
 const LeftArrow = (props) => {
   return (

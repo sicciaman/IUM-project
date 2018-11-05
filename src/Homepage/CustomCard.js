@@ -8,9 +8,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import FastFoodImg from './images/FastFood.png';
+import FastFoodImg from '../images/FastFood.png';
 import { Link } from 'react-router-dom';
-import './App.css';
+import '../App.css';
 
 const styles = {
   card: {

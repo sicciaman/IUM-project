@@ -3,16 +3,16 @@ import Slides from './Slides.js';
 import LeftArrow from './LeftArrow.js';
 import RightArrow from './RightArrow.js';
 
-import ham1 from './images/Hamburger1.svg';
-import ham2 from './images/Hamburger2.svg';
-import ham3 from './images/Hamburger3.svg';
+import ham1 from '../images/Hamburger1.svg';
+import ham2 from '../images/Hamburger2.svg';
+import ham3 from '../images/Hamburger3.svg';
 
-import breadtop1 from './images/BreadTop.svg';
-import toast from './images/Toast.svg';
-import breadbot1 from './images/BreadBottom.svg';
+import breadtop1 from '../images/BreadTop.svg';
+import toast from '../images/Toast.svg';
+import breadbot1 from '../images/BreadBottom.svg';
 
-import arrowLeft from './images/glyphicons-211-arrow-left.png';
-import './App.css';
+import '../App.css';
+import './ingredientsSlider.css';
 
 import PropTypes from 'prop-types';
 
@@ -24,11 +24,35 @@ class IngredientsSlider extends Component {
 		this.state = {
 			currentIndex: 0,
 			translateValue: 0,
-			meat: [ham1, ham2, ham3],
-      breadtop: [breadtop1, toast],
-			breadbot: [breadbot1, toast],
-      other: [],
-			ingredient: []
+			meat: [{
+				"name": "Hamburger di Cavallo",
+				"image": ham1
+			},{
+				"name": "Hamburger di Manzo",
+				"image": ham2
+			},{
+				"name": "Hamburger di Soia",
+				"image": ham3
+			}],
+
+      breadtop: [{
+				"name": "Panino",
+				"image": breadtop1
+			},{
+				"name": "Toast",
+				"image": toast
+			}],
+
+			breadbot: [{
+				"name": "Panino",
+				"image": breadbot1
+			},{
+				"name": "Toast",
+				"image": toast
+			}],
+
+      other: [{}],
+			ingredient: [{}]
 		};
 	}
 
@@ -73,7 +97,7 @@ class IngredientsSlider extends Component {
       case("other"):
         this.state.ingredient = [...this.state.other];break;
       default:
-        this.state.ingredient = [];
+        this.state.ingredient = [{}];
     }
 
 		return (
@@ -86,15 +110,15 @@ class IngredientsSlider extends Component {
 					}}>
 					<div>
 		      {
-		        this.state.ingredient.map((image, i) => {
+		        this.state.ingredient.map((item, i) => {
 		          return(
-		            <Slides image={image} key={i} />
+		            <Slides image={item.image} key={i} />
 		          )
 		        })
 		      }
 		      </div>
 				</div>
-				{/*<img src={ham1} />*/}
+				<p className="ingredient-label">{this.state.ingredient[this.state.currentIndex].name}</p>
 
 				<RightArrow nextSlide = {this.nextSlide}/>
 
